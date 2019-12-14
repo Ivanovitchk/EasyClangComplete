@@ -490,6 +490,20 @@ class EasyClangComplete(sublime_plugin.EventListener):
         """
         if hover_zone != sublime.HOVER_TEXT:
             return
+
+        # ----------------------------------------------------------------------
+        # Mod to not replace default ST3 reference popups for functions
+        hooveredScopes = view.scope_name(point)
+        # print (hooveredScopes)
+
+        # isPresent = hooveredScopes.find('meta.function.c')
+        isDef   = hooveredScopes.find('entity.name.function.definition.c')
+        isDecl  = hooveredScopes.find('entity.name.function.declaration.c')
+
+        if isDef != -1 or isDecl != -1:
+          return
+        # ----------------------------------------------------------------------
+
         EasyClangComplete.begin_show_info_job(view, point)
 
     @staticmethod
