@@ -66,7 +66,7 @@ class Popup:
         popup = Popup((
             settings.popup_maximum_width, settings.popup_maximum_height
         ))
-        popup.__popup_type = 'panel-error "ECC: Error"'
+        popup.__popup_type = 'panel-error "Error"'
         popup.__text = markupsafe.escape(text)
         return popup
 
@@ -76,7 +76,7 @@ class Popup:
         popup = Popup((
             settings.popup_maximum_width, settings.popup_maximum_height
         ))
-        popup.__popup_type = 'panel-warning "ECC: Warning"'
+        popup.__popup_type = 'panel-warning "Warning"'
         popup.__text = markupsafe.escape(text)
         return popup
 
@@ -86,7 +86,7 @@ class Popup:
         popup = Popup((
             settings.popup_maximum_width, settings.popup_maximum_height
         ))
-        popup.__popup_type = 'panel-info "ECC: Info"'
+        popup.__popup_type = 'panel-info "Info"'
         is_type_decl = cursor.kind in [
             cindex.CursorKind.STRUCT_DECL,
             cindex.CursorKind.UNION_DECL,
@@ -223,7 +223,7 @@ class Popup:
         popup = Popup((
             settings.popup_maximum_width, settings.popup_maximum_height
         ))
-        popup.__popup_type = 'panel-info "ECC: Info"'
+        popup.__popup_type = 'panel-info "Info"'
         is_message = cursor.kind in [
             cindex.CursorKind.OBJC_MESSAGE_EXPR,
         ]
