@@ -30,7 +30,7 @@ DECLARATION_TEMPLATE = """## Declaration:
 """
 
 REFERENCES_TEMPLATE = \
-    """### References: <small><small>(from sublime index)</small></small>
+    """### References: <small></small>
 {type_references}
 """
 
