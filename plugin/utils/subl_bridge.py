@@ -179,6 +179,7 @@ class SublBridge:
             str: language, one of LANG_TAGS or None if nothing matched
         """
         syntax = SublBridge.get_view_syntax(view)
+        print (syntax)
         for lang_tag, syntaxes in settings_storage.valid_lang_syntaxes.items():
             if syntax in syntaxes and lang_tag in SublBridge.LANG_NAMES:
                 return lang_tag, SublBridge.LANG_NAMES[lang_tag]

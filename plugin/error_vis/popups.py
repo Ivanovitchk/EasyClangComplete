@@ -82,7 +82,7 @@ class Popup:
 
     @staticmethod
     def info(cursor, cindex, settings):
-        """Initialize a new warning popup."""
+        """Initialize a new info popup."""
         popup = Popup((
             settings.popup_maximum_width, settings.popup_maximum_height
         ))
@@ -440,6 +440,7 @@ class Popup:
 
     def show(self, view, location=-1, on_navigate=None):
         """Show this popup."""
+        print("invoking mdpopups")
         mdpopups.show_popup(view, self.as_markdown(),
                             max_width=self.max_width,
                             max_height=self.max_height,
